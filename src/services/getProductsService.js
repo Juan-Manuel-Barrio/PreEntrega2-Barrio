@@ -1,7 +1,7 @@
 import productsMock from "../mocks/productsMocks"
 
 const getProductsService = () => {
-  
+
     return new Promise((resolve, reject) => {
 
       if( productsMock ) {

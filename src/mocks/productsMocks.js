@@ -2,19 +2,19 @@ const productsMock = [
     {
         id: 1,
         title: 'remera',
-        price: 100,
+        price: 2500,
         category: 'remeras'
     },
     {
-        id: 3,
+        id: 2,
         title: 'zapatilla',
-        price: 100,
+        price: 26000,
         category: 'zapatillas'
     },
     {
-        id: 4,
+        id: 3,
         title: 'buzo',
-        price: 100,
+        price: 15000,
         category: 'buzos'
     },
 ] 

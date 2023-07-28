@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import Cart from "./components/Cart/Cart";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import CartState from "./context/CartState";
-import About from "./pages/About/About";
-import Checkout from "./pages/Checkout/Checkout";
-import Home from "./pages/Home/Home";
+import Cart from "src/Components/Cart/Cart.js";
+import ItemDetailContainer from "src/Components/ItemDetailContainer/ItemDetailContainer.js";
+import ItemListContainer from "src/Components/ItemListContainer/ItemListContainer.js";
+import CartState from "src/context/CartState.js";
+import About from "src/pages/About/About.js";
+import Checkout from "src/pages/Checkout/Checkout.js";
+import Home from "src/pages/Home/Home.js";
 
 function App() {
 return (

@@ -1,38 +1,69 @@
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import CartWidgets from "src/Components/CartWidgets/CartWidgets.js";
+import logo_letters from "src/logo_letras.png";
+import { Link, NavLink } from "react-router-dom";
+import { getCategories } from "src/utils/firebaseFetching.js";
+import { useEffect } from "react";
 
-// Components
-import CartWidget from './CartWidget/CartWidget';
+const Navbar = () => {
+const [open, setOpen] = useState(false);
+const [categories, setCategories] = useState([]);
+const fetchCategories = async () => {
+    const data = await getCategories();
+    setCategories(data);
+};
+const handleOpen = () => {
+    setOpen(!open);
+};
+const handleLeave = () => {
+    setOpen(false);
+};
 
+useEffect(() => {
+    fetchCategories();
+}, []);
+return (
+    <nav className="header__nav">
+    <Link to="/" className="nav__link">
+        Inicio
+    </Link>
+    <NavLink to="/shop" className="nav__link">
+        Tienda
+    </NavLink>
+    <Link to="/">
+        <img src={logo_letters} alt="Logo letters" className="nav__logo" />
+    </Link>
 
-const NavBar = () => {
-    return (
-        <nav className="navbar navbar-dark bg-black">
-            <div className="container">
-                
-                <Link  to='/' className="navbar-brand">Bang-OK</Link>
-
-                <Link to='/category/remeras'>
-                    <p>Remeras</p>
+    <div className="dropdown-menu">
+        <button className="nav__link" onClick={handleOpen}>
+        Productos
+        </button>
+        <div
+        className={`dropdown-menu__categories 
+        ${open ? "active" : "inactive"}`}
+        onMouseLeave={handleLeave}
+        >
+        {categories &&
+            categories.map((category) => {
+            return (
+                <Link
+                to={`/shop/category/${category.name}`}
+                className="nav__link nav__link--category"
+                key={category.id}
+                >
+                {category.name}
                 </Link>
+            );
+            })}
+        </div>
+    </div>
 
-                <Link to='/category/buzos'>
-                    <p>Buzos</p>
-                </Link>
-                
-                <Link to='/category/zapatillas'>
-                    <p>Zapatillas</p>
-                </Link>        
+    <NavLink to="/about" className="nav__link">
+        Nosotros
+    </NavLink>
+    <CartWidgets />
+    </nav>
+);
+};
 
-                <div className="d-flex">
-                <input type="text" className="form-control me-2" placeholder="Buscar" />
-                <button className="btn btn-outline-light me-2" type="button">
-                    Buscar
-                </button>
-                <CartWidget />
-                </div>
-            </div>
-        </nav>
-    );
-}
-
-export default NavBar;
+export default Navbar;

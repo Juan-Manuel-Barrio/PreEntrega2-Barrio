@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import CartWidgets from "src/Components/CartWidgets/CartWidgets.js";
-import logo_letters from "src/logo_letras.png";
+import CartWidgets from "../CartWidgets/CartWidgets";
+import logo_letters from "../../logo_letters_transparent.png";
 import { Link, NavLink } from "react-router-dom";
-import { getCategories } from "src/utils/firebaseFetching.js";
+import { getCategories } from "../../utils/firebaseFetching";
 import { useEffect } from "react";
 
 const Navbar = () => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import shopping_bag from "src/bolsa_compras.png";
-import { useCartContext } from "src/context/CartState.js";
+import shopping_bag from "../../shopping-bag.svg";
+import { useCartContext } from "../../context/CartState";
 
 const CartWidgets = () => {
 const [total, setTotal] = useState(0);

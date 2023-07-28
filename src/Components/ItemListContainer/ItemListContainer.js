@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemList from "src/Components/ItemList/ItemList.js";
+import ItemList from "../ItemList/ItemList";
 import {
-getAllProducts,
-getProductsByCategory,
-} from "src/utils/firebaseFetching.js";
-import Loader from "src/Components/Loader/Loader.js";
+    getAllProducts,
+    getProductsByCategory,
+} from "../../utils/firebaseFetching";
+import Loader from "../Loader/Loader";
 
 const ItemListContainer = () => {
 const [loading, setLoading] = useState(true);

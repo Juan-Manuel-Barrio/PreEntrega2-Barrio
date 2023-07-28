@@ -1,11 +1,11 @@
 import { Form, Formik } from "formik";
-import { addNewOrder } from "src/utils/firebaseFetching.js";
-import { useCartContext } from "src/context/CartState.js";
+import { addNewOrder } from "../../utils/firebaseFetching";
+import { useCartContext } from "../../context/CartState";
 import { serverTimestamp } from "firebase/firestore";
-import TextField from "src/Components/CheckoutForm/TextField.js";
+import TextField from "./TextField";
 import * as Yup from "yup";
 import { useState } from "react";
-import ButtonLoader from "src/Components/Loader/ButtonLoader.js";
+import ButtonLoader from "../Loader/ButtonLoader";
 
 const CheckoutForm = ({ setId }) => {
 const { items } = useCartContext();

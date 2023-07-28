@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "src/Components/Header/Header.js";
+import Header from "../../components/Header/Header";
+
 const About = () => {
 return (
     <>

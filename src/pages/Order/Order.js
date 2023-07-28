@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { GoHeart } from "react-icons/go";
 import { IoReturnUpBack } from "react-icons/io5";
-import { useCartContext } from "src/context/CartState.js";
+import { useCartContext } from "../../context/CartState";
 
 const Order = ({ orderID }) => {
 const { emptyCart } = useCartContext();

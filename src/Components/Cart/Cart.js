@@ -1,9 +1,9 @@
 import React from "react";
-import { useCartContext } from "src/context/CartState.js";
+import { useCartContext } from "../../context/CartState";
 import { MdOutlineClose } from "react-icons/md";
-import Item from "src/Components/Item/Item.js";
-import Divider from "src/Components/Divider/Divider.js";
-import Overlay from "src/Components/Overlay/Overlay.js";
+import Item from "../Item/Item";
+import Divider from "../Divider/Divider";
+import Overlay from "../Overlay/Overlay";
 import { Link } from "react-router-dom";
 
 const Cart = () => {

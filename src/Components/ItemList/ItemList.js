@@ -1,6 +1,7 @@
 import React from "react";
-import Item from "src/Components/Item/Item.js";
-import Header from "src/Components/Header/Header.js";
+import Item from "../Item/Item";
+import Header from "../Header/Header";
+
 const ItemList = ({ products, category }) => {
 return (
     <>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { GoPlus, GoDash } from "react-icons/go";
-import { useCartContext } from "src/context/CartState.js";
+import { useCartContext } from "../../context/CartState";
 
 const ItemCounter = ({
 counter,

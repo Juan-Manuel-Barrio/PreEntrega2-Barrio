@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getProductById } from "src/utils/firebaseFetching.js";
-import Item from "src/Components/Item/Item.js";
-import Loader from "src/Components/Loader/Loader.js";
-import Header from "src/Components/Header/Header.js";
+import { getProductById } from "../../utils/firebaseFetching";
+import Item from "../Item/Item";
+import Loader from "../Loader/Loader";
+import Header from "../Header/Header";
 
 const ItemDetailContainer = () => {
 const { id } = useParams();

@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar.js";
+import NavBar from "../Navbar/NavBar";
 import logo_header from "../../logo_primario.png";
 
 const Header = ({ showAs }) => {

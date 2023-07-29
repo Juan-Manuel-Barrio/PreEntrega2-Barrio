@@ -7,7 +7,7 @@ import {
     query,
     addDoc,
 } from "firebase/firestore";
-import { db } from "src/firebase.js";
+import { db } from "../firebase.js";
 
 const productsCollection = collection(db, "products");
 const categoriesCollection = collection(db, "categories");

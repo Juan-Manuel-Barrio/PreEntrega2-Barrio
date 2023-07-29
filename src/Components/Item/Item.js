@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartState";
 import ItemCounter from "../ItemCounter/ItemCounter";
-import { GoTrashcan } from "react-icons/go";
+import { GoTrash } from "react-icons/go";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
@@ -81,7 +81,7 @@ if (showAs === "CartItem") {
         </div>
 
         <div className="card__actions">
-        <GoTrashcan className="delete" onClick={handleDelete} />
+        <GoTrash className="delete" onClick={handleDelete} />
         </div>
     </div>
     );

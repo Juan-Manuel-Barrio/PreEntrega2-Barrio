@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import shopping_bag from "../../shopping-bag.svg";
+//import shopping_bag from "../../shopping-bag.svg";
+import shopping_bag from '../../bolsa_compras.png'
 import { useCartContext } from "../../context/CartState";
 
 const CartWidgets = () => {

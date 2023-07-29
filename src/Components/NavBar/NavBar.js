@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import CartWidgets from "../CartWidgets/CartWidgets";
-import logo_letters from "../../logo_letters_transparent.png";
+import logo_letters from "../../logo_letras.png";
 import { Link, NavLink } from "react-router-dom";
 import { getCategories } from "../../utils/firebaseFetching";
 import { useEffect } from "react";
 
-const Navbar = () => {
-const [open, setOpen] = useState(false);
-const [categories, setCategories] = useState([]);
-const fetchCategories = async () => {
-    const data = await getCategories();
-    setCategories(data);
-};
-const handleOpen = () => {
-    setOpen(!open);
-};
-const handleLeave = () => {
-    setOpen(false);
-};
+const NavBar = () => {
+    const [open, setOpen] = useState(false);
+    const [categories, setCategories] = useState([]);
+    const fetchCategories = async () => {
+        const data = await getCategories();
+        setCategories(data);
+    };
+    const handleOpen = () => {
+        setOpen(!open);
+    };
+    const handleLeave = () => {
+        setOpen(false);
+    };
 
-useEffect(() => {
-    fetchCategories();
-}, []);
+    useEffect(() => {
+        fetchCategories();
+    }, []);
 return (
     <nav className="header__nav">
     <Link to="/" className="nav__link">
@@ -66,4 +66,4 @@ return (
 );
 };
 
-export default Navbar;
+export default NavBar;

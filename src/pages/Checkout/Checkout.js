@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useCartContext } from "../../context/CartState";
-import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";
-import Divider from "../../components/Divider/Divider";
-import Item from "../../components/Item/Item";
+import CheckoutForm from "../../Components/CheckoutForm/CheckoutForm";
+import Divider from "../../Components/Divider/Divider";
+import Item from "../../Components/Item/Item";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";

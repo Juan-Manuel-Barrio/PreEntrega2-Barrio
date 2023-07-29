@@ -7,7 +7,7 @@ return (
     <>
     <Header />
     <div className="home">
-        <h1 className="home__title">La Fabrica de Bang-Ok</h1>
+        <h1 className="home__title">Bang-Ok Showroom</h1>
 
         <Link to="/shop" className="home__cta">
         Comprar
